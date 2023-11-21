@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 60px;
+    background: rgb(0, 150, 136);
+}
+
+main {
+    height: 503px;
+    background: rgb(220, 219, 211);
+}
+
+.container {
+    background-color: blue;
+    height: 530px;
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    bottom: 2%;
+    display: flex; 
+}
+
+.menu-left {
+    width: 30%;
+    background-color: bisque;
+}
+
+.menu-right {
+    width: 70%;
+    background-color: blueviolet;
+}
+
+.menu-up {
+   
+    height: 8%;
+    background-color: azure;
+}
+
+.menu-down {
+    position: relative;
+    top: 84%;
+    height: 8%;
+    background-color: aqua;
+}
