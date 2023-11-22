@@ -23,26 +23,76 @@
 
             <div class="container">
 
-                
+
                 <div class="menu-left">
+
+                    <div class="sofia"><img src="./img/avatar_io.jpg" style="width: 10%; border-radius: 50%;">Sofia
+                        <span class="icon-1"><i class="fa-solid fa-spinner"></i></span>
+                        <span class="icon-2"><i class="fa-solid fa-message"></i></span>
+                        <span class="icon-3"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    </div>
+
+                    <div style="background-color: rgb(142, 218, 252);">
+                        <span class="campanella"><i class="fa-solid fa-bell-slash"></i></span>
+                        <span style="font-size: 0.7rem; padding-left: 4%;">Ricevi notifiche di nuovi messaggi</span>
+                        <div class="notifica">Attiva notifiche desktop</div>
+                    </div>
+
+                    <div class="cerca">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"
+                                style="font-size: 10px; padding-right: 14%; padding-left: 3%;"></i><span>Cerca o inizia
+                                una nuova chat</span>
+                        </div>
+                    </div>
+
                     <div v-for="contact in contacts">
-                        {{ contact.name }}
-                        <img src= "contact.avatar">
-                    
-                        
 
+                        <img v-bind:src="contact.avatar"
+                            style="width: 10%; border-radius: 50%; position: relative left 3%;">
+                        <span class="nome-contatti">
+                            {{ contact.name }}
+                        </span>
+                        <div class="scritte">
+                            {{ contact.ultimo }}
+                        </div>
 
-                      </div>
+                    </div>
                 </div>
                 
                 <div class="menu-right">
                     
-                    <div class="menu-up"></div>
                     
-                    <div class="menu-down"></div>
-                    
+                    <div class="menu-up">
+                        <div>
+                            <img src="./img/avatar_1.jpg" style="width: 5%; border-radius: 50%;">
+                            <span class="mic">Michele</span>
+                            
+                            <span class="icon-4"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="icon-5"><i class="fa-solid fa-paperclip"></i></span>
+                            <span class="icon-6"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            <p>Ultimo accesso alle 12:00</p>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div>
+                        <div v-for="messaggio in contacts[index].messages">
+                            <span class="messaggio"> {{messaggio.message}}</span>   <br>        
+                            <span>{{messaggio.date}}</span>
+                    </div>
+
+                    </div>
+
+                    <div class="menu-down">
+                        <span class="icon-7"><i class="fa-regular fa-face-smile"></i></span>
+                        <span class="barra-messaggio">Scrivi un messaggio</span>
+                        <span class="icon-8"><i class="fa-solid fa-microphone"></i></span>
+                    </div>
+
                 </div>
-                
+
             </div>
 
         </main>
