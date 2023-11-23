@@ -42,10 +42,11 @@ main {
 }
 
 .menu-down {
-    position: relative;
-    top: 81%;
+    position: absolute;
+    top: 90%;
+    width: 70%;
     height: 10%;
-    background-color:rgb(243, 238, 234);
+    background-color: rgb(243, 238, 234);
 }
 
 .sofia {
@@ -83,13 +84,6 @@ p {
      left: 16%;
      text-decoration: underline;
      
-}
-
-.cerca {
-    padding-bottom: 5%;
-    padding-top: 3%;
-    font-size: small;
-    
 }
 
 .icon-1 {
@@ -174,6 +168,22 @@ p {
     bottom: 34%;
 }
 
-.messaggio {
+.sent {
+    background-color: rgb(213, 249, 186);
+    text-align: right;
+    padding-right: 14%;
+    border-radius: 12px;
+    width: 48%;
+    position: relative;
+    left: 45%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
 
+.received {
+    background-color: white;
+    padding-left: 6%;
+    width: 35%;
+    border-radius: 12px;
+    margin-left: 6%;
 }
