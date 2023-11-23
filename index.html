@@ -25,7 +25,6 @@
 
 
                 <div class="menu-left">
-
                     <div class="sofia"><img src="./img/avatar_io.jpg" style="width: 10%; border-radius: 50%;">Sofia
                         <span class="icon-1"><i class="fa-solid fa-spinner"></i></span>
                         <span class="icon-2"><i class="fa-solid fa-message"></i></span>
@@ -37,7 +36,7 @@
                         <span style="font-size: 0.7rem; padding-left: 4%;">Ricevi notifiche di nuovi messaggi</span>
                         <div class="notifica">Attiva notifiche desktop</div>
                     </div>
-
+                    
                     <div style="margin-bottom: 3%;"> 
                         <div class="search">
                             <form action="#">
@@ -51,16 +50,18 @@
                     </div>
 
                     <div v-for="contact in contacts">
+                        <span @click="contatore">
 
-                        <img v-bind:src="contact.avatar"
+                            <img v-bind:src="contact.avatar"
                             style="width: 10%; border-radius: 50%; position: relative left 3%;">
-                        <span class="nome-contatti">
-                            {{ contact.name }}
-                        </span>
-                        <div class="scritte">
-                            {{ contact.ultimo }}
-                        </div>
-
+                            <span class="nome-contatti">
+                                {{ contact.name }}
+                            </span>
+                            <div class="scritte">
+                                {{ contact.ultimo }}
+                            </div>
+                        </span>  
+                        
                     </div>
                 </div>
 
@@ -89,7 +90,6 @@
                             </div>
                         </div>
 
-
                         <div class="menu-down">
                             <span class="icon-7"><i class="fa-regular fa-face-smile"></i></span>
                             <span class="barra-messaggio">Scrivi un messaggio</span>
@@ -99,7 +99,7 @@
                     </div>
 
                 </div>
-
+                
         </main>
     </div>
     <script src="main.js"></script>
