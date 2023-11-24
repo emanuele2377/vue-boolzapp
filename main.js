@@ -2,11 +2,11 @@
 const { createApp } = Vue
 const contacts =    "messages.message"
 const messages = ""
-createApp({
+const vue = createApp({
     data() {
         return {
 
-            index:"0",
+            index:"2",
 
             contacts: [
                 {
@@ -184,15 +184,17 @@ createApp({
     },
 
            methods: {
-            contatore(event) {
+            contatore(chat) {
 
-                for (let i = 0; i < contacts.length; i++) {
-                let contacts = messages.message
-                messages.message[i]
+                // for (let i = 0; i < contacts.length; i++) {
+                // let contacts = messages.message
+                // messages.message[i]
                     
-                }
-            console.log(contacts)
-            }
+              //  }
+           // console.log(contacts)
+console.log(chat)
+           this.index = chat
+           }
         },
         
             

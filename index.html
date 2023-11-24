@@ -49,8 +49,9 @@
                         </div>
                     </div>
 
-                    <div v-for="contact in contacts">
-                        <span @click="contatore">
+                    <div v-for="contact, i in contacts">
+                        {{i}}
+                        <span @click="contatore (i)">
 
                             <img v-bind:src="contact.avatar"
                             style="width: 10%; border-radius: 50%; position: relative left 3%;">
